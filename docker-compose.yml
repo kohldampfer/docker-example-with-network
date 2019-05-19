@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+    custom1:
+        container_name: custom1
+        image: centos:latest
+        entrypoint:
+            - sleep
+            - inf
+        networks:
+            - my-own-network-name
+    custom2:
+        container_name: custom2
+        image: centos:latest
+        entrypoint:
+            - sleep
+            - inf
+        networks:
+            - my-own-network-name
+
+networks:
+    my-own-network-name:
+         name: my-own-network-name
